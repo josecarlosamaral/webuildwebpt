@@ -1,0 +1,5 @@
+# redirect 301 /index.html https://fabricadideias.pt/site/
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
